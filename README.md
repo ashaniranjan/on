@@ -4,8 +4,8 @@ Have used listerners and testNG framework.Log4j to write log message.
 
 Hve used data property file to fetch URL and Data provider for Email id, password and Name. Since it was only for 3 values used @Data providers instead of Excel.
 
-Instruction to Install code:
-Git Pull to local repository
+PreRequisite to run the project:
+
 1.JRE 1.8
 2. Selenium 4.1 version is  used
 3.Extent Reports 
@@ -14,4 +14,4 @@ Git Pull to local repository
 6.TestNG 7.5
 get all the above reporsitories from maven
 
-To invoke code: Just run the testNG xml file.
+To invoke code: Run the project as TestNG xml suite(right click on TestNG xml file and select Run As TestNG suite)
