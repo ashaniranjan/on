@@ -1,4 +1,4 @@
-package SignUpProcess;
+package SignInProcess;
 
 import java.io.IOException;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -52,10 +52,8 @@ public class Listeners extends base implements ITestListener{
 			e.printStackTrace();
 		}
 	}
-	public void onFinish(ITestContext context) {
-		extent.flush();
-		
-	}
+	
+	
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
@@ -78,10 +76,15 @@ public class Listeners extends base implements ITestListener{
 	@Override
 	public void onStart(ITestContext context) {
 		// TODO Auto-generated method stub
+	}
+		
+		public void onFinish(ITestContext context) {
+			extent.flush();
+			
 		
 	}
 	
-	}
+		}
 
 
 	

@@ -20,21 +20,21 @@ public class base {
 
 	{
 		prop = new Properties();
-		FileInputStream fis = new FileInputStream("C:\\Users\\niri\\eclipse-workspace\\E2EMiro\\src\\main\\java\\resources\\data.properties");
-		prop.load(fis);
+		FileInputStream fis = new FileInputStream("C:\\Users\\niri\\eclipse-workspace\\E2EContorion\\src\\main\\java\\resources\\data.properties");
+		prop.load(fis);		
 		String browsername = prop.getProperty("browser");
 		String url=prop.getProperty("url");
 		String name=prop.getProperty("name");
 		String email= prop.getProperty("email");
 		String password=prop.getProperty("password");
-		
+	
 		
 		
 
 		if (browsername.equals("chrome") )
 		{
 
-			System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\chromedriver_win32\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\chromedriver_win32 (2)\\chromedriver.exe");
 			driver = new ChromeDriver();
 
 		} 
