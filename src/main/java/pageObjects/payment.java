@@ -16,9 +16,9 @@ public class payment {
 	}
 
 	By option= By.xpath("//body/div[@id='app']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[3]/div[2]/div[2]/div[1]/div[1]/ul[1]/li[2]/div[1]/div[1]/span[1]");
-	By cardnumber= By.xpath("//body/div[@id='app']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[3]/div[2]/div[2]/div[1]/div[1]/ul[1]/li[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/label[1]/span[2]/span[1]");
-	By expirydate= By.xpath("//body/div[@id='app']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[3]/div[2]/div[2]/div[1]/div[1]/ul[1]/li[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/label[1]/span[2]/span[1]");
-	By cvv= By.xpath("//body/div[@id='app']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[3]/div[2]/div[2]/div[1]/div[1]/ul[1]/li[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/label[1]/span[2]/span[1]");
+	By cardnumber= By.id("encryptedCardNumber");
+	By expirydate= By.xpath("encryptedExpiryDate");
+	By cvv= By.xpath("encryptedSecurityCode");
 	By cardholdername= By.xpath("//input[@id='nameoncard']");
 	By button=By.xpath("//body/div[@id='app']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[3]/div[2]/div[2]/div[2]/button[1]");
 	

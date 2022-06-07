@@ -42,7 +42,7 @@ public class LoginandSearchFunctionality extends base
 		
 		driver.get(prop.getProperty("url"));
 		//driver.findElement(By.id("popin_tc_privacy_button")).click();
-		//Thread.sleep(10000);
+		//Thread.sleep(1000);
 		 driver.findElement(By.id("onetrust-accept-btn-handler")).click();
 		homepage h=new homepage(driver);
 		h.mendropdown().click();
@@ -50,7 +50,7 @@ public class LoginandSearchFunctionality extends base
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		  driver.manage().window().maximize();
 		  js.executeScript("window.scrollBy(0,800)");
-		  Thread.sleep(10000);
+		  Thread.sleep(4000);
 		h.productlistfield().click();
 		Thread.sleep(3000);
 		//h.quckaddfield().click();
@@ -78,17 +78,19 @@ public class LoginandSearchFunctionality extends base
 		payment p=new payment(driver);
 		p.optionfield().click();
 		Thread.sleep(3000);
-		JavascriptExecutor jse = (JavascriptExecutor) driver;
-		jse.executeScript("arguments[0].value='3700 0000 0000 002';", driver.findElement(By.xpath("//body/div[@id='app']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[3]/div[2]/div[2]/div[1]/div[1]/ul[1]/li[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/label[1]/span[2]/span[1]")));
+		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='js-iframe']")));
+				//driver.findElement(By.id("//body/div[@id='app']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[3]/div[2]/div[2]/div[1]/div[1]/ul[1]/li[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/label[1]/span[2]/span[1]\"))"))).sendKeys(prop.getProperty("cardnumber"));
+		//JavascriptExecutor jse = (JavascriptExecutor) driver;
+		//jse.executeScript("arguments[0].value='3700 0000 0000 002';", driver.findElement(By.xpath("//body/div[@id='app']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[3]/div[2]/div[2]/div[1]/div[1]/ul[1]/li[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/label[1]/span[2]/span[1]")));
 		//jse.executeScript("arguments[0].value='3700 0000 0000 002';", driver.findElement(By.id("encryptedCardNumber")));
-		jse.executeScript("arguments[0].value='03/30';", driver.findElement(By.xpath("//body/div[@id='app']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[3]/div[2]/div[2]/div[1]/div[1]/ul[1]/li[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/label[1]/span[2]/span[1]")));
-	    //p.cardnumberfield().sendKeys(prop.getProperty("cardnumber"));
-	    //p.expirydatefield().sendKeys(prop.getProperty("expiredate"));
-	    //p.cvvfield().sendKeys(prop.getProperty("cvv"));
-	    //p.cardholdernamefield().sendKeys(prop.getProperty("cardname"));
-		jse.executeScript("arguments[0].value='7373';", driver.findElement(By.xpath("//body/div[@id='app']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[3]/div[2]/div[2]/div[1]/div[1]/ul[1]/li[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/label[1]/span[2]/span[1]")));
-		jse.executeScript("arguments[0].value='John';", driver.findElement(By.xpath("//input[@id='nameoncard']")));
-		
+		//jse.executeScript("arguments[0].value='03/30';", driver.findElement(By.xpath("//body/div[@id='app']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[3]/div[2]/div[2]/div[1]/div[1]/ul[1]/li[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/label[1]/span[2]/span[1]")));
+	    p.cardnumberfield().sendKeys(prop.getProperty("cardnumber"));
+	    p.expirydatefield().sendKeys(prop.getProperty("expiredate"));
+	    p.cvvfield().sendKeys(prop.getProperty("cvv"));
+	    p.cardholdernamefield().sendKeys(prop.getProperty("cardname"));
+		//jse.executeScript("arguments[0].value='7373';", driver.findElement(By.xpath("//body/div[@id='app']/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[3]/div[2]/div[2]/div[1]/div[1]/ul[1]/li[2]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/label[1]/span[2]/span[1]")));
+		//jse.executeScript("arguments[0].value='John';", driver.findElement(By.xpath("//input[@id='nameoncard']")));
+		driver.switchTo().defaultContent();
 	    p.button1().click();
 	    //assert.assertEquals(null, null)
 	}
