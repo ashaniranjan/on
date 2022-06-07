@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SignUpProcess.SearchFunctionality">
+      <class name="SignInProcess.LoginandSearchFunctionality">
         <methods>
-          <include name="searchengine"/>
-          <include name="exit"/>
           <include name="initialize"/>
+          <include name="exit"/>
+          <include name="searchengine"/>
         </methods>
-      </class> <!-- SignUpProcess.SearchFunctionality -->
+      </class> <!-- SignInProcess.LoginandSearchFunctionality -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

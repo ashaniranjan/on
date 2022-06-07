@@ -10,7 +10,7 @@ public class ExtentReporterNG {
 	{
 		String path=System.getProperty("user.dir")+"\\reports\\index.html";
 		ExtentSparkReporter reporter= new ExtentSparkReporter(path);
-		reporter.config().setReportName("Miro SignUp Results");
+		reporter.config().setReportName("Contorion Results");
 		reporter.config().setDocumentTitle("Test Results");
 		
 		extent = new ExtentReports();
